@@ -45,9 +45,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="ECommerce.Core">
-	    <HintPath>bin\Debug\net6.0\ECommerce.Core.dll</HintPath>
-	  </Reference>
 	</ItemGroup>
 
 </Project>
