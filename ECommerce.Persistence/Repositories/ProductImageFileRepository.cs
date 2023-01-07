@@ -1,0 +1,14 @@
+﻿using Core.Persistence.Repositories;
+using ECommerce.Application.Services.Repositories;
+using ECommerce.Domain.Entities;
+using ECommerce.Persistence.Contexts;
+
+namespace ECommerce.Persistence.Repositories
+{
+    public class ProductImageFileRepository : EfRepositoryBase<ProductImageFile, BaseDbContext>, IProductImageFileRepository
+    {
+        public ProductImageFileRepository(BaseDbContext context) : base(context)
+        {
+        }
+    }
+}
