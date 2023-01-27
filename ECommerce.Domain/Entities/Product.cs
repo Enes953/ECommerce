@@ -15,6 +15,7 @@ namespace ECommerce.Domain.Entities
 
         public ICollection<Order> Orders { get; set; }
         public ICollection<ProductImageFile> ProductImageFiles { get; set; }
+        public ICollection<BasketItem> BasketItems { get; set; }
 
         //public product(int id,string name, string stock, int price):this()
         //{

@@ -10,5 +10,6 @@ namespace ECommerce.Application.Services.Repositories
 {
     public interface IOrderRepository:IAsyncRepository<Order>,IRepository<Order>
     {
+
     }
 }

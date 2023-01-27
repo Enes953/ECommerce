@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Persistence.Repositories
 {
-    public class OrderRepository:EfRepositoryBase<Order,BaseDbContext>,IOrderRepository
+    public class OrderRepository : EfRepositoryBase<Order, BaseDbContext>, IOrderRepository
     {
         public OrderRepository(BaseDbContext context) : base(context)
         {

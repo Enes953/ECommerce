@@ -28,7 +28,9 @@ namespace ECommerce.Persistence.Contexts
         public DbSet<ImageFile> ImageFiles { get; set; }
         public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<InvoiceFile> InvoiceFiles { get; set; }
- 
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+
 
         public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration) : base(dbContextOptions)
         {
@@ -62,6 +64,14 @@ namespace ECommerce.Persistence.Contexts
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Order>()
+                .HasKey(b => b.Id);
+
+            modelBuilder.Entity<Basket>()
+                .HasOne(b => b.Order)
+                .WithOne(o => o.Basket)
+                .HasForeignKey<Order>(b => b.BasketId);
+
             base.OnModelCreating(modelBuilder);
         }
     }
